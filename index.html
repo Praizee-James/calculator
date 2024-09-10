@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="alert('you have clicked me twice')">Click me</button>
+    <button onclick="pressBtn()">internal</button>
+    <button onclick="testExternal()">External</button>
+    <input id="myText" onkeydown="writeSomething()" type="text">
+    <input id="myText" onkeydown="writeSomethingAgain()" type="text">
+
+
+    <h1 id="tag" ></h1>
+</body>
+</html>
+<script src="intro.js"></script>
+<script>
+function writeSomething(){
+    console.log(document.getElementById("myText").value);
+    
+}
+function writeSomethingAgain(){
+    document.getElementById("myText").value;
+    
+}
+
+    function pressBtn(){
+        alert("I just pressed this button")
+        console.log("Let me check something")
+        console.log(30*60);
+        console.log("30 * 60");
+        console.log("30"*"60");
+        console.log("30"+"60");
+        console.log("30" + 60);
+       
+    }
+
+    //variables is a container that is used to save data
+    // what is data and what are data types in javascript
+    // let,var,const
+    //how to output data in javascript
+    // data type => string""
+    // data type => boolean
+    // data type => array
+    // data type => object
+    // data type => undefined
+    // data type => null
+    console.log("Daniel"=="daniel");
+    console.log(20 == "20"); // comparing value
+    console.log(20 === "20"); //value and datatype
+    // array is a collection of data or data types inside a square bracket. it is referenced through its index
+    // object is collection of data in a curly bracket. it is a collection of data in key-value pair.
+    // undefined => declaring a variable that does not  have a value
+
+    let name = "Daniel";
+    console.log(name);
+    console.log("name");
+    console.log(name == "name");
+    console.log(name == "Daniel");
+
+    var myClass = "JavaScript"
+
+    console.log(myClass);
+
+    const price = 400
+    console.log(price);
+
+    name = "samuel"
+    name = "Victor"
+    myClass = "CSS"
+    console.log(name);
+    console.log(myClass);
+
+    let test;
+
+    console.log(test);
+
+    let idk = null;
+    document.getElementById("tag").innerHTML = myClass;
+
+    // show css onclick 
+// ways to output data : console,alert,innerHTML
+    // assignment = Find 20 javascript keywords
+    // what is an html attribute
+</script>
+<!-- console allows you see data that you don't want to appear directly on the webpage. console is the eyes oof a developer. -->

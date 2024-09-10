@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assignment.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div class="word">
+        <h2>Word Sensor App</h2>
+        <input type="text" id="box" placeholder="type something here">
+        <button class="button" onclick="checkWords()">
+            <a href="">Click here</a>
+        </button>
+        <button class="button1">
+            <a href="">
+                <span id="icon" class="material-symbols-outlined">
+                    refresh
+                    </span>
+            </a>
+            
+        </button>
+
+        <input type="text" id="results" class="box1">
+    </div>
+</body>
+
+</html>
+<script>
+    // List of words to detect
+const keywords = ['shit', 'stupid', 'foolish', 'fuck'];
+
+function checkWords() {
+    const text  = document.getElementById('box').value.toLowerCase();
+    const resultsDiv = document.getElementById('results');
+    let foundWords = [];
+
+    // Check if any of the keywords are present in the input text
+    for (const word of keywords) {
+        if (text.includes(word)) {
+            foundWords.push(word);
+        }
+    }
+
+    // Display the results
+    if (foundWords.length > 0) {
+        resultsDiv.innerHTML = `Found the following keywords: ${foundWords.join(', ')}`;
+    } else {
+        resultsDiv.innerHTML = 'No keywords found.';
+    }
+}
+
+</script>

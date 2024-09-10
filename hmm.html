@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyword Censor App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        textarea {
+            width: 400px;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+        #results {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .button{
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: blue;
+    border: none;
+}
+.button1{
+    width: 50px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: blue;
+    border: none;
+}
+.word{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+   align-items: center;
+   padding: 50px 0;
+}
+    </style>
+</head>
+<body>
+    <div class="word" >
+    <h1>Word Censor App</h1>
+    <textarea id="textInput" placeholder="Type your text here..."></textarea>
+    <button class="button" onclick="censorKeywords()">Censor Keywords</button>
+    <button class="button1">
+        <a href="">
+            <span id="icon" class="material-symbols-outlined">
+                refresh
+                </span>
+        </a>
+        
+    </button>
+    <div id="results"></div>
+
+    <script src="script.js"></script>
+
+</div>
+</body>
+</html>
+
+<script>
+    // List of keywords to censor
+const keywords = ['foolish', 'fuck', 'shit' , ' stupid']; // Modify these words as needed
+
+function censorKeywords() {
+    const textInput = document.getElementById('textInput').value;
+    let censoredText = textInput;
+
+    // Replace each keyword with asterisks
+    for (const word of keywords) {
+        const regex = new RegExp(`\\b${word}\\b`, 'gi'); // Case-insensitive word boundary
+        censoredText = censoredText.replace(regex, '***');
+    }
+
+    // Display the censored text
+    const resultsDiv = document.getElementById('results');
+    resultsDiv.textContent = censoredText;
+}
+
+</script>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="javacalculator.css">
+</head>
+
+<body>
+    <h2>Little cal</h2>
+    <main>
+        <div class="box">
+            <div class="mini">
+                <input type="number" class="box1" id="firstnumber">
+                <input type="number" class="box1" id="secondnumber">
+            </div>
+            <div class="big">
+                <div class="buttons">
+                    <button onclick="plus('+')" class="btn1">+</button>
+                    <button onclick="plus('-')" class="btn1">-</button>
+                    <button onclick="plus('*')" class="btn1">*</button>
+                    <button onclick="plus('/')" class="btn1">/</button>
+                    <button onclick="plus('**')" class="btn1">**</button>
+                    <button onclick="plus('%')" class="btn1">%</button>
+                </div>
+                <div class="box2" id="result">
+                </div>
+                <div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
+<script>
+    function plus(sign) {
+        let firstnumber = document.getElementById('firstnumber').value
+        let secondnumber = document.getElementById('secondnumber').value
+        let result = document.getElementById('result')
+        console.log(firstnumber);
+        console.log(secondnumber);
+
+        if (sign === '+') {
+        result.innerHTML = Number(firstnumber) + Number(secondnumber)
+        firstnumber.innerHTML = ''
+        console.log(firstnumber);
+        
+    } else if (sign === '-') {
+        result.innerHTML = Number(firstnumber) - Number(secondnumber)
+    } else if (sign === '*') {
+        result.innerHTML = Number(firstnumber) * Number(secondnumber)
+    } else if (sign === '/') {
+        result.innerHTML = Number(firstnumber) / Number(secondnumber)
+    } else if (sign === '**') {
+        result.innerHTML = Number(firstnumber) ** Number(secondnumber)
+    }
+    else {
+        result.innerHTML = Number(firstnumber) % Number(secondnumber)
+    }
+    firstnumber.innerHTML = document.getElementById('firstnumber').clear()
+        console.log(firstnumber);
+    }
+   
+</script>

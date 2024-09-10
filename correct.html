@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input6" > 
+    <button onclick="censorWords()"> click me</button>
+    <div id="display" >
+
+    </div>
+</body>
+</html>
+
+<script>
+    let inputTag = document.getElementById('input6')
+    inputTag.placeholder = 'input here'
+    inputTag.style.outlineColor = 'green'
+    let div = document.getElementById('display')
+// .value is used to grab what is in the input
+    console.log(inputTag);
+    
+    function censorWords() {
+       let value = inputTag.value
+       
+       let censoredValue = value.replaceAll('shit', '****').replaceAll('foolish', '*****').replaceAll('fuck', '******').replace('stupid', '*****')
+       console.log(censoredValue);
+       
+        // div.innerHTML = `<p> ${censoredValue}</p>` step1
+        // DOM = document object model body tag
+        div.innerHTML = ''
+        let pTag = document.createElement('p') // how to create an element
+        pTag.innerHTML = censoredValue
+        div.appendChild(pTag)
+        // append: last child, prepend: first child, nth child: middle child
+    }
+    
+</script>

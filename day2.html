@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    const string = 'hello world'
+    // string = "hello world"
+    let string1 = 'hello world'
+    let string2 = `hello world`
+    let wStorage = string[6]
+    console.log(wStorage);
+
+    console.log(string.length);
+    console.log('sdandsfjreuruurjfrhrfufrhruhruurhur'.length);
+    // my name is Ope james, i am an english student
+    // `` backit quote
+    let space = ' '
+    let firstName = 'Ope'
+    let lastName = 'james'
+    let language = 'javascript'
+    let job = 'student'
+
+    let sentence = 'My name is '+ firstName + space + lastName + space + language + space + job + '.'
+   console.log(sentence);
+   let thirdName = "Praise"
+   let sentence1 = `My name is ${firstName}`
+   let sentence2 = `My name is ${thirdName}`
+   let sentence3 = `My name is {thirdName}`
+   console.log(sentence1);
+   console.log(sentence2);
+   console.log(sentence3);
+   
+   let sentence4 = `My name is ${firstName} ${lastName}, I am a ${language} ${job}`
+   console.log(sentence4);
+   
+   let a = 5
+   let b = 10
+
+   let newSentence = 'the sum of ' + a + ' and ' + b + ' is ' + (a+b)
+   console.log(newSentence);
+   
+   let secondSentence = `the sum of ${a} and ${b} is ${a+b}`
+   console.log(secondSentence);
+    
+   let value = 'naija is' + 49
+   let val = '4'+9
+
+   console.log( typeof (val));
+   
+   let val1 = Number ('4')+9
+   console.log( typeof val1);
+   console.log(val1);
+   let val2 =parseInt ('4')+9
+   let val3 = +'4'+9
+   console.log( typeof val2);
+   console.log( typeof val3);
+   console.log(val2);
+   console.log(val3);
+   
+
+   // ways to convert a string to a number : number constructor, use parseInt (convert to an integer), put a + sign in front of the string
+   // string takes precedence over numbers in javascript
+   // ` backtik quote is used to do sting interpolation to join strings together
+   // the backtik is called a template literal ``
+   // use $ and {} inside `` to call external variable
+   // javascript is read from top to bottom so assign variables before calling them out
+    // camelcasing: first letter in lowercase, other meaningful words in uppercase
+    // space has an index in javascript. length = 11, index; 1-10
+    // string methods for day 3 and what they do.
+
+// day 3
+    let myString = 'Hello'
+    console.log(myString);
+    
+myString= myString.toUpperCase()
+console.log(myString);
+
+let myString1 = 'Hello'
+    console.log(myString1);
+    
+myString1= myString1.toLowerCase()
+console.log(myString1);
+
+let newString = 'JavaScript Knowledge, i love JavaScript '
+console.log(newString, newString.length);
+
+let newString1 = 'Java+Script+ Know+ledge'
+let script = newString.substr(4, 6)
+console.log(script);
+
+let java = newString.substr(0, 4)
+console.log(java);
+
+let script2 = newString.substring(4,10 )
+// for substring count the end index from the begging again
+// substring and slice are exactly the same
+// substing makes a new copy of the origianl one
+console.log(script2);
+
+// split converts a string to an array.
+
+let value1 = newString.split()
+console.log(value1);
+
+value = ['Javascript']// output of empty split
+
+let value2 = newString.split('')
+let value3 = newString1.split('+')
+//let value3 = newString1.split(' + ') returns initial value inside an array
+console.log(value2);
+console.log(value3);
+// whatever you are spliting by wont be in the console
+
+
+let arr = [4, 'ghet', undefined, null, [], {}]
+
+let noSpace = newString.trim() // trimstart, trimend
+console.log(noSpace, noSpace.length);
+
+console.log( newString.includes('Java') );
+console.log( newString.includes('java') ); // case-sensitive
+console.log( newString.includes('jak') );
+
+newString= newString.replace('JavaScript','Python') 
+console.log(newString);
+
+// assign to modify content
+newString= newString.replaceAll('JavaScript','Python') // assign to modify content
+console.log(newString);
+
+let value4 = 'dan iel'
+value4= value4.replace(' ', '')
+value4 = value4.toUpperCase()
+console.log(value4);
+
+
+// character at. value at a particular index
+
+// to get last index
+let lastIndex = string.length - 1
+// console.log(string.charAt(lastIndex));
+
+console.log('a'.charCodeAt(0));
+console.log('b'.charCodeAt(0));
+console.log('c'.charCodeAt(0));
+console.log('d'.charCodeAt(0));
+console.log('e'.charCodeAt(0));
+console.log('f'.charCodeAt(0));
+
+console.log('A'.charCodeAt(0));
+console.log('B'.charCodeAt(0));
+console.log('C'.charCodeAt(0));
+console.log('D'.charCodeAt(0));
+console.log('E'.charCodeAt(0));
+console.log('F'.charCodeAt(0));
+
+let first = 'hello,'
+let second = 'i'
+let third = 'am danny'
+
+let myNewSentence = first.concat(' ', second, ' ', third)
+let myNextSentence = second.concat(' ',third, '  , ', first.replace(',', '.'))
+console.log(myNewSentence);
+console.log(myNextSentence);
+//startsWith,endsWith. // search acts like indexOf. repeat()
+// indexOf returns -1 if it doesn't find the index in the string
+// includes gives a boolean result
+// trim will not remove the spaces inthe middle of a string. it'll remove only the excess space before and after
+// arrays are used to store values, each value must be seperated by a comma.
+//substr creakes a new copy. the start index and end index, whose start is the first index. the last letter should be empty
+// method that makes a new copy of the string is toUpperCase. methods that modify: 
+</script>
